@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Oranienbaum';
+    src: local('Oranienbaum'),
+    url(../files/Oranienbaum-Regular.ttf);
+}
+
+h1,h2,h3,h4,h5,h6,a{
+    font-family: 'Oranienbaum';
+}
+p{
+    font-family: 'Roboto'
+}
+
+.fon{
+    background: black;
+}
+.fon__2{
+    background-image: url("../image/bg-main.png");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+}
+.fon__3{
+    background: white;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+#menu{
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+#menu.fixed{
+    position: fixed;
+    background: black;
+    top: 0;
+    width: 100%;
+}
+.nav-item a{
+    color: white;
+}
+.first__block{
+    width: 100%;
+    height: 821px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.second_block{
+    padding-top: 60px;
+    text-align: center;
+    align-items: center;
+}
+.novinka{
+    position: relative;
+    width: 290px;
+    display: flex;
+    padding: 7px 90px 7px 90px;
+    transform: rotate(-40deg);
+    text-align: center;
+    background: red;
+    top: 50px;
+    left: -50px;
+    color: white;
+    border-radius: 100px 100px 0px 0px;
+}
+.stack-top {
+    --d:5px;
+    --w:100px;
+    --c:#333;
+
+    top: 0;
+    right: 0;
+    transform: translate(29.29%, -100%) rotate(40deg);
+    color: #fff;
+    text-align: center;
+    width: var(--w);
+    transform-origin: bottom left;
+    padding:5px 0 calc(var(--d) + 5px);
+    background: no-repeat var(--c);
+    clip-path:polygon(0 100%,0 calc(100% - var(--d)),50% calc(100% - var(--d) - var(--w)/2),100% calc(100% - var(--d)),100% 100%,calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)))
+}
+
+.stack-top.left {
+    left:0;
+    right:auto;
+    transform: translate(-29%, -100%) rotate(-45deg);
+    transform-origin: bottom right;
+}
+.second_block p {
+    padding-top: 30px;
+    max-width: 800px;
+    font-size: 18px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.second_block img{
+    width: 100%;
+}
+
+.fourth__block{
+    padding-top: 60px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.fourth__block p{
+    color: grey;
+
+}
+.table{
+    display: flex;
+    justify-content: center;
+}
+.table table{
+    width: 70%;
+}
+.table tr{
+    border: 1px solid #FFD110;
+}
+.table td{
+    border: 1px solid #FFD110;
+}
+.table thead{
+    background: #FFD100;
+}
+.table tbody{
+    background: #FFF000;
+}
+.currency{
+    text-align: center;
+}
+.currency button{
+    background: none;
+    border: 1px solid black;
+
+}
+.table_zakaz{
+    text-align: center;
+}
+.table_zakaz button{
+    background: black;
+    color: white;
+    padding: 7px 15px 7px 15px;
+    font-family: Roboto;
+    font-size: 15px;
+}
+.packages{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.package{
+    border: 1px solid darkgrey;
+    padding: 20px;
+    max-width: 300px;
+    position: relative;
+    display: inline-block;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.package::after {
+    content: "";
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.package:hover {
+    transform: scale(1.05, 1.05);
+}
+.package:hover::after {
+    opacity: 1;
+}
+.package h3{
+    text-align: center;
+}
+.package button{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: red;
+    padding: 7px 100px 7px 100px;
+}
+.oldprice {
+    position: relative;
+    color: #7f94a1;
+}
+
+.oldprice:before {
+    border-bottom: 3px solid red;
+    position: absolute;
+    content: "";
+    top: 1px;
+    right: 2px;
+    width: 110%;
+    height: 50%;
+    transform: rotate(-15deg);
+}
+
+.gallery{
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+.gallery h1{
+    padding-bottom: 20px;
+}
+.gallery_item{
+    display: flex;
+    align-items: center;
+}
+.gallery_item img{
+    width: 35%;
+    padding: 15px;
+}
+.gallery_item p {
+    font-size: 20px;
+}
+.bottom{
+    padding-top: 20px;
+    background: black;
+    color: white;
+}
+.bottom p {
+    font-size: 12px;
+}
+.bottom__btn{
+    text-align: center;
+}
+.bottom__btn button{
+    background: none;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid white;
+}
+.bottom__btn button a{
+    font-size: 15px;
+    color: white;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+.cena{
+    font-size: 25px;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    table.zakaz thead {
+        display: none;
+    }
+    table.zakaz tr {
+        display: block;
+        border-bottom: 2px solid #e8e9eb;
+    }
+    table.zakaz td {
+        display: block;
+        text-align: center;
+    }
+    table.zakaz td:before {
+        content: attr(aria-label);
+        float: left;
+        font-weight: bold;
+        width: 50%;
+    }
+
+    .gallery {
+        width: 90%;
+    }
+    .gallery_item img{
+        width: 60%;
+    }
+    .gallery_item p{
+        font-size: 17px;
+    }
+    table.zakaz{
+        font-size: 15px;
+    }
+    .cena{
+        font-size: 15px;
+    }
+    .table_zakaz button{
+        padding: 3px 10px 3px 10px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .package h3{
+        font-size: 22px;
+    }
+    .package p {
+        font-size: 14px;
+    }
+    .package button{
+        padding: 7px 70px 7px 70px;
+    }
+    .gallery_item p{
+        font-size: 13px;
+    }
+    .fourth__block{
+        width: 90%;
+    }
+}
